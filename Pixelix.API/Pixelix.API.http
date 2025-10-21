@@ -1,0 +1,6 @@
+@Pixelix.API_HostAddress = http://localhost:5105
+
+GET {{Pixelix.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

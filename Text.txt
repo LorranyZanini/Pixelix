@@ -1,0 +1,9 @@
+Biblioteca ultilizada no projeto
+
+dotnet add package Microsoft.EntityFrameworkCore --version 9.0.10
+    dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.10
+    dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.10
+    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 9.0.10
+    dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 9.0.10
+    dotnet add package System.IdentityModel.Tokens.Jwt --version 8.14.0
+    dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0
