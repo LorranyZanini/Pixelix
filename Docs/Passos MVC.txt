@@ -11,7 +11,7 @@
 
 
 4. Criar na pasta a classe ApiSettings
-namespace <NOME DO PROJETO>.UI.Models;
+namespace <NOME DO PROJETO>.UI.Models; 
 
 public class ApiSettings
 {

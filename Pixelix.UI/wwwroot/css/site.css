@@ -18,7 +18,13 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+  flex: 1;
+  margin-bottom: 20px;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
