@@ -1,0 +1,1011 @@
+1. Executar diretamente na pasta do repositório o comando:
+    dotnet new mvc -o <NOME DO PROJETO>.UI
+
+
+2. Executar diretamente na pasta do repositório, se existir um arquivo <NOME DO PROJETO>.sln
+  dotnet sln add <NOME DO PROJETO>.UI\<NOME DO PROJETO>.UI.csproj
+
+
+3. Altera no arquivo <NOME DO PROJETO>.API.csproj a linha 5:
+    <Nullable>disable</Nullable>
+
+
+4. Criar na pasta a classe ApiSettings
+namespace <NOME DO PROJETO>.UI.Models;
+
+public class ApiSettings
+{
+    public string BaseUrl { get; set; } = string.Empty;
+    public int TimeoutSeconds { get; set; } = 30;
+}
+
+
+5. Abra o arquivo launchSettings.json do projeto <NOME DO PROJETO>.API e copie o caminho de rota da chave http -> applicationUrl.
+
+
+6. Abra o arquivo appsettings.json do projeto <NOME DO PROJETO>.UI e adicione o código abaixo alterando a rota para a copiada no passo 4:
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ApiSettings": {
+    "BaseUrl": "http://localhost:5058/api/",
+    "TimeoutSeconds": 30
+  }
+}
+
+    
+7. Registre os serviços no Program.cs:
+using <NOME DO PROJETO>.UI.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configurações
+builder.Services.Configure<ApiSettings>(
+    builder.Configuration.GetSection("ApiSettings"));
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Configuração da Autenticação
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "SessionAuth";
+    options.DefaultChallengeScheme = "SessionAuth";
+    options.DefaultSignInScheme = "SessionAuth";
+})
+.AddCookie("SessionAuth", options =>
+{
+    options.LoginPath = "/Auth/Login";
+    options.AccessDeniedPath = "/Auth/AcessoNegado";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Administrador", policy => 
+        policy.RequireRole("Administrador"));
+    
+    options.AddPolicy("Gerente", policy => 
+        policy.RequireRole("Gerente"));
+    
+    options.AddPolicy("Cliente", policy => 
+        policy.RequireRole("Cliente"));
+});
+
+builder.Services.AddHttpContextAccessor();
+
+// Serviços de API
+
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseSession();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapStaticAssets();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+
+app.Run();
+
+
+8. Criar uma pasta ViewModels dentro da pasta do projeto <NOME DO PROJETO>.UI
+
+
+9. Criar a classe LoginVM dentro da pasta ViewModels:
+using System.ComponentModel.DataAnnotations;
+
+namespace <NOME DO PROJETO>.UI.ViewModels;
+
+public class LoginVM
+{
+    [Display(Name = "E-mail")]
+    [Required(ErrorMessage = "O E-mail é Obrigatório")]
+    [EmailAddress(ErrorMessage = "E-mail válido")]
+    public string Email { get; set; }
+
+    [Display(Name = "Senha")]
+    [DataType(DataType.Password)]
+    [Required(ErrorMessage = "A Senha é Obrigatória")]
+    public string Senha { get; set; }
+}
+
+
+10. Criar a classe RegistroVM dentro da pasta ViewModels:
+using System.ComponentModel.DataAnnotations;
+
+namespace <NOME DO PROJETO>.UI.ViewModels;
+
+public class RegistroVM
+{
+    [Display(Name = "E-mail")]
+    [Required(ErrorMessage = "O E-mail é Obrigatório")]
+    [EmailAddress(ErrorMessage = "Informe um e-mail válido")]
+    public string Email { get; set; }
+
+    [Display(Name = "Senha")]
+    [DataType(DataType.Password)]
+    [Required(ErrorMessage = "A Senha é Obrigatória")]
+    public string Senha { get; set; }
+
+    [StringLength(50)]
+    [Display(Name = "Nome Completo")]
+    [Required(ErrorMessage = "O Nome Completo é Obrigatório")]
+    public string Nome { get; set; }
+
+    [DataType(DataType.Date)]
+    [Display(Name = "Data de Nascimento")]
+    public DateTime? DataNascimento { get; set; }
+
+    public IFormFile Foto { get; set; }
+}
+
+
+11. Crie uma pasta DTOs dentro da pasta do projeto <NOME DO PROJETO>.UI
+
+
+12. Crie na pasta DTOs a classe UserDto:
+using System.Text.Json.Serialization;
+
+namespace <NOME DO PROJETO>.UI.DTOs;
+
+public class UserDto
+{
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = string.Empty;
+
+    [JsonPropertyName("email")]
+    public string Email { get; set; } = string.Empty;
+
+    [JsonPropertyName("nome")]
+    public string Nome { get; set; } = string.Empty;
+
+    [JsonPropertyName("dataNascimento")]
+    public DateTime? DataNascimento { get; set; }
+
+    [JsonPropertyName("foto")]
+    public string Foto { get; set; } = string.Empty;
+
+    [JsonPropertyName("perfil")]
+    public string Perfil { get; set; } = string.Empty;
+}
+
+
+13. Crie na pasta DTOs a classe AuthResponseDto:
+using System.Text.Json.Serialization;
+
+namespace <NOME DO PROJETO>.UI.DTOs;
+
+public class AuthResponseDto
+{
+    [JsonPropertyName("token")]
+    public string Token { get; set; } = string.Empty;
+
+    [JsonPropertyName("expiration")]
+    public DateTime Expiration { get; set; }
+
+    [JsonPropertyName("user")]
+    public UserDto User { get; set; } = null!;
+}
+
+
+14. Crie uma pasta Services dentro da pasta do projeto <NOME DO PROJETO>.UI, dentro desta nova pasta criar outras duas pastas:
+  - Interfaces
+  - Implementations
+
+
+15. Crie na pasta Services\Implementations a classe BaseApiService:
+using System.Text;
+using System.Text.Json;
+using <NOME DO PROJETO>.UI.Models;
+using Microsoft.Extensions.Options;
+
+namespace <NOME DO PROJETO>.UI.Services.Implementations;
+
+public abstract class BaseApiService
+{
+    protected readonly HttpClient _httpClient;
+    protected readonly ApiSettings _apiSettings;
+    protected readonly IHttpContextAccessor _httpContextAccessor;
+
+    protected BaseApiService(
+        HttpClient httpClient,
+        IOptions<ApiSettings> apiSettings,
+        IHttpContextAccessor httpContextAccessor)
+    {
+        _httpClient = httpClient;
+        _apiSettings = apiSettings.Value;
+        _httpContextAccessor = httpContextAccessor;
+
+        _httpClient.BaseAddress = new Uri(_apiSettings.BaseUrl);
+        _httpClient.Timeout = TimeSpan.FromSeconds(_apiSettings.TimeoutSeconds);
+    }
+
+    protected async Task<T> GetAsync<T>(string endpoint)
+    {
+        AddAuthHeader();
+        var response = await _httpClient.GetAsync(endpoint);
+        return await HandleResponse<T>(response);
+    }
+
+    protected async Task<T> PostAsync<T>(string endpoint, object data)
+    {
+        AddAuthHeader();
+        var content = CreateJsonContent(data);
+        var response = await _httpClient.PostAsync(endpoint, content);
+        return await HandleResponse<T>(response);
+    }
+
+    protected async Task<T> PutAsync<T>(string endpoint, object data)
+    {
+        AddAuthHeader();
+        var content = CreateJsonContent(data);
+        var response = await _httpClient.PutAsync(endpoint, content);
+        return await HandleResponse<T>(response);
+    }
+
+    protected async Task<bool> DeleteAsync(string endpoint)
+    {
+        AddAuthHeader();
+        var response = await _httpClient.DeleteAsync(endpoint);
+        return response.IsSuccessStatusCode;
+    }
+
+    private void AddAuthHeader()
+    {
+        var token = _httpContextAccessor.HttpContext?.Session.GetString("JWTToken");
+        if (!string.IsNullOrEmpty(token))
+        {
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+        }
+    }
+
+    private StringContent CreateJsonContent(object data)
+    {
+        var json = JsonSerializer.Serialize(data);
+        return new StringContent(json, Encoding.UTF8, "application/json");
+    }
+
+    private async Task<T> HandleResponse<T>(HttpResponseMessage response)
+    {
+        var content = await response.Content.ReadAsStringAsync();
+
+        if (response.IsSuccessStatusCode)
+        {
+            return JsonSerializer.Deserialize<T>(content,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        // Tenta desserializar a resposta de erro da API
+        try
+        {
+            var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(content,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+            // Se conseguiu desserializar, usa a mensagem do erro
+            var errorMessage = errorResponse?.Message ?? $"Erro: {response.StatusCode}";
+
+            // Para erros 401, faz logout automático
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                _httpContextAccessor.HttpContext?.Session.Clear();
+            }
+
+            throw new HttpRequestException(errorMessage);
+        }
+        catch (JsonException)
+        {
+            // Se não conseguir desserializar, usa a mensagem padrão
+            throw new HttpRequestException($"Erro {response.StatusCode}: {content}");
+        }
+    }
+}
+
+public class ErrorResponse
+{
+    public int StatusCode { get; set; }
+    public string Message { get; set; } = string.Empty;
+    public string Details { get; set; } = string.Empty;
+}
+
+
+16. Criar dentro da pasta Services\Interfaces a interface IAuthService:
+using <NOME DO PROJETO>.UI.ViewModels;
+
+namespace <NOME DO PROJETO>.UI.Services.Interfaces;
+
+public interface IAuthService
+{
+    Task<(bool Success, string Message)> LoginAsync(LoginVM loginVM);
+    Task<(bool Success, string Message)> RegisterAsync(RegistroVM registroDto);
+    void Logout();
+    bool IsAuthenticated();
+    string GetUserToken();
+    string GetUserName();
+    string GetUserEmail();
+    string GetUserFoto();
+    string GetUserPerfil();
+}
+
+
+
+17. Criar dentro da pasta Services\Implementations a classe AuthService:
+using System.Text;
+using System.Text.Json;
+using <NOME DO PROJETO>.UI.DTOs;
+using <NOME DO PROJETO>.UI.Models;
+using <NOME DO PROJETO>.UI.Services.Interfaces;
+using <NOME DO PROJETO>.UI.ViewModels;
+using Microsoft.Extensions.Options;
+
+namespace <NOME DO PROJETO>.UI.Services.Implementations;
+
+public class AuthService : BaseApiService, IAuthService
+{
+    public AuthService(
+        HttpClient httpClient,
+        IOptions<ApiSettings> apiSettings,
+        IHttpContextAccessor httpContextAccessor)
+        : base(httpClient, apiSettings, httpContextAccessor)
+    {
+    }
+
+    public async Task<(bool Success, string Message)> LoginAsync(LoginVM loginVM)
+    {
+        try
+        {
+            // Remove o header de auth se existir (para login)
+            _httpClient.DefaultRequestHeaders.Authorization = null;
+
+            var response = await PostAsync<AuthResponseDto>("auth/login", loginVM);
+
+            if (response != null && !string.IsNullOrEmpty(response.Token))
+            {
+                // Salva o token na sessão
+                _httpContextAccessor.HttpContext?.Session.SetString("JWTToken", response.Token);
+                _httpContextAccessor.HttpContext?.Session.SetString("UserEmail", response.User.Email);
+                _httpContextAccessor.HttpContext?.Session.SetString("UserName", response.User.Nome);
+                _httpContextAccessor.HttpContext?.Session.SetString("UserId", response.User.Id);
+                if (response.User.DataNascimento.HasValue)
+                {
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserDataNascimento",
+                        response.User.DataNascimento.Value.ToString("yyyy-MM-dd"));
+                }
+                _httpContextAccessor.HttpContext?.Session.SetString("UserFoto", response.User.Foto ?? "");
+                _httpContextAccessor.HttpContext?.Session.SetString("UserPerfil", response.User.Perfil);
+                return (true, "Login realizado com sucesso!");
+            }
+            return (false, "Credenciais inválidas.");
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"Erro no login: {ex.Message}");
+            return (false, ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro inesperado no login: {ex.Message}");
+            return (false, "Erro interno. Tente novamente.");
+        }
+    }
+
+    public async Task<(bool Success, string Message)> RegisterAsync(RegistroVM registroVM)
+    {
+        try
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = null;
+
+            var formData = new MultipartFormDataContent();
+
+            // Campos obrigatórios
+            formData.Add(new StringContent(registroVM.Nome ?? ""), "Nome");
+            formData.Add(new StringContent(registroVM.Email ?? ""), "Email");
+            formData.Add(new StringContent(registroVM.Senha ?? ""), "Senha");
+
+            // Campo opcional
+            if (registroVM.DataNascimento.HasValue)
+            {
+                formData.Add(new StringContent(registroVM.DataNascimento.Value.ToString("yyyy-MM-dd")), "DataNascimento");
+            }
+
+            // Foto (opcional) - se tiver arquivo, envia, senão não
+            if (registroVM.Foto != null && registroVM.Foto.Length > 0)
+            {
+                var fileContent = new StreamContent(registroVM.Foto.OpenReadStream());
+                fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(registroVM.Foto.ContentType);
+                formData.Add(fileContent, "Foto", registroVM.Foto.FileName);
+            }
+
+            var response = await _httpClient.PostAsync("auth/register", formData);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var authResponse = JsonSerializer.Deserialize<AuthResponseDto>(content,
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                if (authResponse != null && !string.IsNullOrEmpty(authResponse.Token))
+                {
+                    // Salva o token e dados do usuário na sessão
+                    _httpContextAccessor.HttpContext?.Session.SetString("JWTToken", authResponse.Token);
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserEmail", authResponse.User.Email);
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserName", authResponse.User.Nome);
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserId", authResponse.User.Id);
+
+                    if (authResponse.User.DataNascimento.HasValue)
+                    {
+                        _httpContextAccessor.HttpContext?.Session.SetString("UserDataNascimento",
+                            authResponse.User.DataNascimento.Value.ToString("yyyy-MM-dd"));
+                    }
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserFoto", authResponse.User.Foto ?? "");
+                    _httpContextAccessor.HttpContext?.Session.SetString("UserPerfil", authResponse.User.Perfil);
+
+                    return (true, "Registro realizado com sucesso!");
+                }
+            }
+
+            // Tratamento de erro
+            var errorContent = await response.Content.ReadAsStringAsync();
+            string errorMessage;
+
+            try
+            {
+                var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(errorContent,
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                errorMessage = errorResponse?.Message ?? "Falha no registro.";
+            }
+            catch
+            {
+                errorMessage = $"Erro {response.StatusCode}: {errorContent}";
+            }
+
+            return (false, errorMessage);
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"Erro no registro: {ex.Message}");
+            return (false, ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro inesperado no registro: {ex.Message}");
+            return (false, "Erro interno. Tente novamente.");
+        }
+    }
+
+    public void Logout()
+    {
+        _httpContextAccessor.HttpContext?.Session.Clear();
+    }
+
+    public bool IsAuthenticated()
+    {
+        return !string.IsNullOrEmpty(GetUserToken());
+    }
+
+    public string GetUserToken()
+    {
+        return _httpContextAccessor.HttpContext?.Session.GetString("JWTToken") ?? string.Empty;
+    }
+
+    public string GetUserName()
+    {
+        return _httpContextAccessor.HttpContext?.Session.GetString("UserName") ?? string.Empty;
+    }
+
+    public string GetUserEmail()
+    {
+        return _httpContextAccessor.HttpContext?.Session.GetString("UserEmail") ?? string.Empty;
+    }
+
+    public string GetUserFoto()
+    {
+        return _httpContextAccessor.HttpContext?.Session.GetString("UserFoto") ?? string.Empty;
+    }
+
+    public string GetUserPerfil()
+    {
+        return _httpContextAccessor.HttpContext?.Session.GetString("UserPerfil") ?? string.Empty;
+    }
+}
+
+
+18. Crei na pasta Services\Implementations a classe UserContextService:
+using System.Security.Claims;
+using <NOME DO PROJETO>.UI.Services.Interfaces;
+
+namespace <NOME DO PROJETO>.UI.Services.Implementations;
+
+public class UserContextService
+{
+    private readonly IAuthService _authService;
+
+    public UserContextService(IAuthService authService)
+    {
+        _authService = authService;
+    }
+
+    public ClaimsPrincipal CreateClaimsPrincipal()
+    {
+        if (!_authService.IsAuthenticated())
+            return new ClaimsPrincipal(new ClaimsIdentity());
+
+        var claims = new List<Claim>
+            {
+                new(ClaimTypes.Name, _authService.GetUserName()),
+                new(ClaimTypes.Email, _authService.GetUserEmail()),
+                new("Perfil", _authService.GetUserPerfil()),
+                new(ClaimTypes.Role, _authService.GetUserPerfil())
+            };
+
+        var identity = new ClaimsIdentity(claims, "SessionAuth");
+        return new ClaimsPrincipal(identity);
+    }
+}
+
+
+19. Crie uma pasta Middleware na raiz do projeto <NOME DO PROJETO>.UI, e dentro a classe SessionAuthMiddleware:
+using <NOME DO PROJETO>.UI.Services.Implementations;
+
+namespace <NOME DO PROJETO>.UI.Middleware;
+
+public class SessionAuthMiddleware
+{
+    private readonly RequestDelegate _next;
+
+    public SessionAuthMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public async Task InvokeAsync(HttpContext context, UserContextService userContextService)
+    {
+        // Configura o User.Identity baseado na sessão
+        context.User = userContextService.CreateClaimsPrincipal();
+        await _next(context);
+    }
+}
+
+
+20. Adicionando os novos serviços no Program.cs:
+using <NOME DO PROJETO>.UI.Middleware;
+using <NOME DO PROJETO>.UI.Models;
+using <NOME DO PROJETO>.UI.Services.Implementations;
+using <NOME DO PROJETO>.UI.Services.Interfaces;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configurações
+builder.Services.Configure<ApiSettings>(
+    builder.Configuration.GetSection("ApiSettings"));
+builder.Services.AddScoped<UserContextService>();
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Configuração da Autenticação
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "SessionAuth";
+    options.DefaultChallengeScheme = "SessionAuth";
+    options.DefaultSignInScheme = "SessionAuth";
+})
+.AddCookie("SessionAuth", options =>
+{
+    options.LoginPath = "/Auth/Login";
+    options.AccessDeniedPath = "/Auth/AcessoNegado";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Administrador", policy => 
+        policy.RequireRole("Administrador"));
+    
+    options.AddPolicy("Gerente", policy => 
+        policy.RequireRole("Gerente"));
+    
+    options.AddPolicy("Cliente", policy => 
+        policy.RequireRole("Cliente"));
+});
+
+builder.Services.AddHttpContextAccessor();
+
+// Serviços de API
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseSession();
+
+app.Use(async (context, next) =>
+{
+    var userContextService = context.RequestServices.GetRequiredService<UserContextService>();
+    context.User = userContextService.CreateClaimsPrincipal();
+    await next();
+});
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapStaticAssets();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
+
+
+app.Run();
+
+
+21. Adicione um Controller com o nome AuthController na pastas Controllers
+using <NOME DO PROJETO>.UI.Services.Interfaces;
+using <NOME DO PROJETO>.UI.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+
+namespace <NOME DO PROJETO>.UI.Controllers;
+
+public class AuthController : Controller
+{
+    private readonly ILogger<AuthController> _logger;
+    private readonly IAuthService _authService;
+
+    public AuthController(ILogger<AuthController> logger, IAuthService authService)
+    {
+        _logger = logger;
+        _authService = authService;
+    }
+
+    public IActionResult Login()
+    {
+        if (_authService.IsAuthenticated())
+            return RedirectToAction("Index", "Home");
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(LoginVM loginVM)
+    {
+        if (!ModelState.IsValid)
+            return View(loginVM);
+
+        var (success, message) = await _authService.LoginAsync(loginVM);
+
+        if (success)
+            return RedirectToAction("Index", "Home");
+
+        ModelState.AddModelError(string.Empty, message);
+        return View(loginVM);
+    }
+
+    public IActionResult Registro()
+    {
+        if (_authService.IsAuthenticated())
+            return RedirectToAction("Index", "Home");
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Registro(RegistroVM registroDto)
+    {
+        if (!ModelState.IsValid)
+            return View(registroDto);
+
+        var (success, message) = await _authService.RegisterAsync(registroDto);
+
+        if (success)
+            return RedirectToAction("Index", "Home");
+
+        ModelState.AddModelError(string.Empty, message);
+        return View(registroDto);
+    }
+
+    public IActionResult Logout()
+    {
+        _authService.Logout();
+        return RedirectToAction("Index", "Home");
+    }
+}
+
+
+22. Altere no arquivo site.css:
+body {
+  padding-bottom: 60px;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+
+23. Criar na pasta Views\Shared\_LoginPartial.cshtml:
+@using <NOME DO PROJETO>.UI.Services
+@inject IAuthService AuthService
+@{
+    string foto = AuthService.GetUserFoto();
+    foto = string.IsNullOrEmpty(foto) ? "http://localhost:5058/img/usuarios/no-photo.png" : foto;
+}
+
+@if (AuthService.IsAuthenticated())
+{
+    <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="@foto" width="40" /> 
+        </a>
+        <ul class="dropdown-menu" style="left: -100px">
+            <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Sair</a></li>
+        </ul>
+    </div>
+}
+else
+{
+    <div>
+        <a class="btn btn-dark text-white px-3" asp-controller="Auth" asp-action="Login">Acesso</a>
+    </div>
+}
+
+
+24. Altere o arquivo _Layout.cshtml:
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><NOME DO PROJETO> - @ViewData["Title"]</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/<NOME DO PROJETO>.UI.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body class="min-vh-100">
+    <header class="d-block">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><NOME DO PROJETO></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container-fluid d-flex flex-column">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - <NOME DO PROJETO> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
+
+
+25. Altere o arquivo Views\_ViewImports.cshtml:
+@using <NOME DO PROJETO>.UI
+@using <NOME DO PROJETO>.UI.Models
+@using <NOME DO PROJETO>.UI.ViewModels
+@using <NOME DO PROJETO>.UI.Services.Interfaces
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+26. Altere o arquivo Views\Shared\_ValidationScriptsPartial.cshtml:
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+<script type="text/javascript">
+    let mensagemErro = '';
+    $(".validation-summary-errors ul li").each(function () {
+        mensagemErro += $(this).text() + '<br/>';
+    });
+    if (mensagemErro != '')
+        swal.fire(
+            'Ocorreu um Problema!',
+            mensagemErro,
+            'error'
+        );
+</script>
+
+
+27. Adicione na pasta Views uma pasta Auth
+
+
+28. Crie dentro da pasta Views\Auth um arquivo com o nome Login.cshtml:
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="card formContainer p-5">
+    <h2 class="mb-4">Login</h2>
+    <form asp-action="Login" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger" hidden></div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger mt-2"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Senha" class="form-label"></label>
+            <input asp-for="Senha" type="password" class="form-control" />
+            <span asp-validation-for="Senha" class="text-danger mt-2"></span>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mt-1">Entrar</button>
+        
+        <p class="text-center mt-3">Novo por aqui? <a asp-action="Registro" asp-controller="Auth">Crie sua conta!</a></p>
+    </form>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/auth.css">
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
+
+
+29. Crie dentro da pasta Views\Auth um arquivo com o nome Registro.cshtml:
+@model RegistroVM
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="card formContainer p-5">
+    <h2 class="mb-4">Criar Conta</h2>
+    <form asp-action="Registro" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger" hidden></div>
+        <div class="mb-3">
+            <label asp-for="Nome" class="form-label"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger mt-2"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger mt-2"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Senha" class="form-label"></label>
+            <input asp-for="Senha" type="password" class="form-control" />
+            <span asp-validation-for="Senha" class="text-danger mt-2"></span>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mt-1">Criar</button>
+        
+        <p class="text-center mt-3">Já possui uma conta? <a asp-action="Login" asp-controller="Auth">Entre aqui!</a></p>
+    </form>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/auth.css">
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}
+
+
+30. Crie dentro da pasta Views\Auth um arquivo com o nome AcessoNegado.cshtml:
+@{
+    ViewData["Title"] = "Acesso Negado";
+}
+
+<div class="card formContainer p-5">
+    <h2 class="mb-4">Acesso Negado</h2>
+    
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/auth.css">
+}
+
+
+31. Criar um Controller na pasta Controllers com o nome AdminController:
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace <NOME DO PROJETO>.UI.Controllers;
+
+[Authorize(Roles = "Administrador")]
+public class AdminController : Controller
+{
+    private readonly ILogger<AdminController> _logger;
+
+    public AdminController(ILogger<AdminController> logger)
+    {
+        _logger = logger;
+    }
+
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View("Error!");
+    }
+}
+
+
+32. Criar na pasta Views uma pasta Admin e dentro um arquivo Index.cshtml:
+@{
+    ViewData["Title"] = "Área Administrativa";
+}
+
+<h1>AREA ADMINISTRATIVA</h1>
