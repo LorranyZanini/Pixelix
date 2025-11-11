@@ -1,4 +1,4 @@
-namespace <Pixelix.API.Services.Interfaces;
+namespace Pixelix.API.Services.Interfaces;
 
 public interface IFileService
 {
