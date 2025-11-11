@@ -19,12 +19,14 @@ html {
 
 body {
   padding-bottom: 60px;
+  background-color: #ECD4FF !important;
 }
 
 main {
   min-height: calc(100vh - 160px);
   flex: 1;
   margin-bottom: 20px;
+  background-color: #ECD4FF !important;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -34,4 +36,29 @@ main {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.navbar-color {
+  background-color: #3F1662 !important;
+}
+
+.footer {
+  background-color: #3F1662 !important;
+}
+
+a.nav-item.nav-link {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+a.nav-item.nav-link.active {
+  color: #9456C4;
+  font-weight: bold;
+}
+
+i {
+  color: #ffffff;
+  background-color: #9456C4;
+  padding: 5px 10px;
+  border-radius: 10px;
 }

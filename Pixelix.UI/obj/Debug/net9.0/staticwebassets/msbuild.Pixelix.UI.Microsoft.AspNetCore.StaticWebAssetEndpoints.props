@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/Pixelix.UI/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"753"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 00:12:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1100"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 01:25:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Pixelix.UI/css/site.h7wge7mhqs.css">
+    <StaticWebAssetEndpoint Include="_content/Pixelix.UI/css/site.vuj92tvlit.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"h7wge7mhqs"},{"Name":"integrity","Value":"sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="},{"Name":"label","Value":"_content/Pixelix.UI/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"753"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 00:12:07 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vuj92tvlit"},{"Name":"integrity","Value":"sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="},{"Name":"label","Value":"_content/Pixelix.UI/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1100"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 01:25:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Pixelix.UI/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -756,17 +756,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 00:12:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Pixelix.UI/Pixelix.UI.7qrx84ft56.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Pixelix.UI.7qrx84ft56.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7qrx84ft56"},{"Name":"integrity","Value":"sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C\u002B6E49TLfiMT8S7Q="},{"Name":"label","Value":"_content/Pixelix.UI/Pixelix.UI.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YS1UcdO/7vevPbMXZEVWeLh8Zt8C\u002B6E49TLfiMT8S7Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 00:59:26 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Pixelix.UI/Pixelix.UI.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Pixelix.UI.7qrx84ft56.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Pixelix.UI.scas0d43wv.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C\u002B6E49TLfiMT8S7Q="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1128"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022YS1UcdO/7vevPbMXZEVWeLh8Zt8C\u002B6E49TLfiMT8S7Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 00:59:26 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 01:26:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Pixelix.UI/Pixelix.UI.scas0d43wv.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Pixelix.UI.scas0d43wv.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"scas0d43wv"},{"Name":"integrity","Value":"sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="},{"Name":"label","Value":"_content/Pixelix.UI/Pixelix.UI.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1131"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Nov 2025 01:26:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

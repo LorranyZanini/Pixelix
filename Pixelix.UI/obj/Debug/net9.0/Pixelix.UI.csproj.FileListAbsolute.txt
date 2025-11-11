@@ -18,7 +18,6 @@ C:\Users\etec\Desktop\Pixelix\Pixelix.UI\bin\Debug\net9.0\Pixelix.UI.pdb
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\scopedcss\bundle\Pixelix.UI.styles.css
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\scopedcss\projectbundle\Pixelix.UI.bundle.scp.css
-C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\tckn9ht44a-h7wge7mhqs.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\0qovuz3z3x-61n19gt1b8.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\no821wddk1-xtxxf3hu2r.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\geg8bl4s9p-t1cqhe9u97.gz
@@ -80,8 +79,6 @@ C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\4r7xacox3j-
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\8kxnicl3qr-9vr69e8ynj.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\78xpw2cyov-87fc7y1x7t.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\4w3dudso7y-mlv21k5csn.gz
-C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\yew3axtqup-7qrx84ft56.gz
-C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\l9t5d1w6gk-7qrx84ft56.gz
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -96,3 +93,6 @@ C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\refint\Pixelix.UI.dll
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\Pixelix.UI.pdb
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\Pixelix.UI.genruntimeconfig.cache
 C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\ref\Pixelix.UI.dll
+C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\tckn9ht44a-vuj92tvlit.gz
+C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\yew3axtqup-scas0d43wv.gz
+C:\Users\etec\Desktop\Pixelix\Pixelix.UI\obj\Debug\net9.0\compressed\l9t5d1w6gk-scas0d43wv.gz

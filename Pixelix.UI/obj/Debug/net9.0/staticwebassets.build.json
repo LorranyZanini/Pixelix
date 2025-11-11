@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZCcjNNhZQsL/edwukVSdikTM8EuIukdJqI993z0lAeI=",
+  "Hash": "QXa6agxHLsB3bDeymUEOtLsRZyM7GZkDiF4Wn+Cuw1c=",
   "Source": "Pixelix.UI",
   "BasePath": "_content/Pixelix.UI",
   "Mode": "Default",
@@ -794,12 +794,12 @@
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-7qrx84ft56.gz",
+      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-scas0d43wv.gz",
       "SourceId": "Pixelix.UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Pixelix.UI",
-      "RelativePath": "Pixelix.UI#[.{fingerprint=7qrx84ft56}]!.bundle.scp.css.gz",
+      "RelativePath": "Pixelix.UI#[.{fingerprint=scas0d43wv}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -808,8 +808,8 @@
       "RelatedAsset": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "k2irr4ypw5",
-      "Integrity": "PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=",
+      "Fingerprint": "viv6gcguu5",
+      "Integrity": "6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css"
@@ -1109,12 +1109,12 @@
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-h7wge7mhqs.gz",
+      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-vuj92tvlit.gz",
       "SourceId": "Pixelix.UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Pixelix.UI",
-      "RelativePath": "css/site#[.{fingerprint=h7wge7mhqs}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=vuj92tvlit}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1123,8 +1123,8 @@
       "RelatedAsset": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "f45bfpe8ez",
-      "Integrity": "Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I=",
+      "Fingerprint": "we7hfpcoij",
+      "Integrity": "yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\css\\site.css"
@@ -1277,12 +1277,12 @@
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-7qrx84ft56.gz",
+      "Identity": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-scas0d43wv.gz",
       "SourceId": "Pixelix.UI",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Pixelix.UI",
-      "RelativePath": "Pixelix.UI#[.{fingerprint=7qrx84ft56}]?.styles.css.gz",
+      "RelativePath": "Pixelix.UI#[.{fingerprint=scas0d43wv}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -1291,8 +1291,8 @@
       "RelatedAsset": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Pixelix.UI.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "k2irr4ypw5",
-      "Integrity": "PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=",
+      "Fingerprint": "viv6gcguu5",
+      "Integrity": "6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Pixelix.UI.styles.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "7qrx84ft56",
-      "Integrity": "YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=",
+      "Fingerprint": "scas0d43wv",
+      "Integrity": "lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Pixelix.UI.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "7qrx84ft56",
-      "Integrity": "YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=",
+      "Fingerprint": "scas0d43wv",
+      "Integrity": "lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h7wge7mhqs",
-      "Integrity": "8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=",
+      "Fingerprint": "vuj92tvlit",
+      "Integrity": "x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2729,12 +2729,12 @@
   "Endpoints": [
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-h7wge7mhqs.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-vuj92tvlit.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002824858757"
+          "Quality": "0.002217294900"
         }
       ],
       "ResponseHeaders": [
@@ -2744,15 +2744,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "353"
+          "Value": "450"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I=\""
+          "Value": "\"yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2772,13 +2772,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\""
+          "Value": "W/\"x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="
+          "Value": "sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="
         }
       ]
     },
@@ -2793,7 +2793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "753"
+          "Value": "1100"
         },
         {
           "Name": "Content-Type",
@@ -2801,11 +2801,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\""
+          "Value": "\"x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2815,13 +2815,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="
+          "Value": "sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-h7wge7mhqs.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-vuj92tvlit.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2830,7 +2830,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "353"
+          "Value": "450"
         },
         {
           "Name": "Content-Type",
@@ -2838,11 +2838,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I=\""
+          "Value": "\"yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2860,18 +2860,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I="
+          "Value": "sha256-yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw="
         }
       ]
     },
     {
-      "Route": "css/site.h7wge7mhqs.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-h7wge7mhqs.gz",
+      "Route": "css/site.vuj92tvlit.css",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-vuj92tvlit.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002824858757"
+          "Quality": "0.002217294900"
         }
       ],
       "ResponseHeaders": [
@@ -2881,15 +2881,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "353"
+          "Value": "450"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I=\""
+          "Value": "\"yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2909,13 +2909,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\""
+          "Value": "W/\"x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h7wge7mhqs"
+          "Value": "vuj92tvlit"
         },
         {
           "Name": "label",
@@ -2923,12 +2923,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="
+          "Value": "sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="
         }
       ]
     },
     {
-      "Route": "css/site.h7wge7mhqs.css",
+      "Route": "css/site.vuj92tvlit.css",
       "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2938,7 +2938,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "753"
+          "Value": "1100"
         },
         {
           "Name": "Content-Type",
@@ -2946,11 +2946,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE=\""
+          "Value": "\"x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2960,7 +2960,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h7wge7mhqs"
+          "Value": "vuj92tvlit"
         },
         {
           "Name": "label",
@@ -2968,13 +2968,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8w6rvixPx0CBmXBV1wKuejivCpDVEFGyshJ7P1OX3CE="
+          "Value": "sha256-x9Ji4z2xl45oriZcz3q28hZfEw7GFVnYKTqPQkzWCFs="
         }
       ]
     },
     {
-      "Route": "css/site.h7wge7mhqs.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-h7wge7mhqs.gz",
+      "Route": "css/site.vuj92tvlit.css.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\tckn9ht44a-vuj92tvlit.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2983,7 +2983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "353"
+          "Value": "450"
         },
         {
           "Name": "Content-Type",
@@ -2991,11 +2991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I=\""
+          "Value": "\"yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:12:07 GMT"
+          "Value": "Tue, 11 Nov 2025 01:25:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3013,7 +3013,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h7wge7mhqs"
+          "Value": "vuj92tvlit"
         },
         {
           "Name": "label",
@@ -3021,7 +3021,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Ub4eB4LSAfW+xFnjOW71tYf7X8nwXZ/+7ie7fEF4E1I="
+          "Value": "sha256-yHJf9fR/q2dl4W/2FqRcy4d/Bz7I9NdKl/D+8ppgIqw="
         }
       ]
     },
@@ -21286,13 +21286,13 @@
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.bundle.scp.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-7qrx84ft56.gz",
+      "Route": "Pixelix.UI.bundle.scp.css",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-scas0d43wv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001838235294"
+          "Quality": "0.001801801802"
         }
       ],
       "ResponseHeaders": [
@@ -21302,19 +21302,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -21330,26 +21330,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "W/\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "7qrx84ft56"
-        },
-        {
-          "Name": "label",
-          "Value": "Pixelix.UI.bundle.scp.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.bundle.scp.css",
+      "Route": "Pixelix.UI.bundle.scp.css",
       "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21359,7 +21351,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1131"
         },
         {
           "Name": "Content-Type",
@@ -21367,11 +21359,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
+        }
+      ]
+    },
+    {
+      "Route": "Pixelix.UI.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-scas0d43wv.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "554"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8="
+        }
+      ]
+    },
+    {
+      "Route": "Pixelix.UI.scas0d43wv.bundle.scp.css",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-scas0d43wv.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001801801802"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "554"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "scas0d43wv"
+        },
+        {
+          "Name": "label",
+          "Value": "Pixelix.UI.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
+        }
+      ]
+    },
+    {
+      "Route": "Pixelix.UI.scas0d43wv.bundle.scp.css",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1131"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21381,7 +21518,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7qrx84ft56"
+          "Value": "scas0d43wv"
         },
         {
           "Name": "label",
@@ -21389,13 +21526,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-7qrx84ft56.gz",
+      "Route": "Pixelix.UI.scas0d43wv.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-scas0d43wv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21404,7 +21541,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "Content-Type",
@@ -21412,11 +21549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21434,7 +21571,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7qrx84ft56"
+          "Value": "scas0d43wv"
         },
         {
           "Name": "label",
@@ -21442,18 +21579,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw="
+          "Value": "sha256-6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8="
         }
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.styles.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-7qrx84ft56.gz",
+      "Route": "Pixelix.UI.scas0d43wv.styles.css",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-scas0d43wv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001838235294"
+          "Quality": "0.001801801802"
         }
       ],
       "ResponseHeaders": [
@@ -21463,15 +21600,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21491,13 +21628,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "W/\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7qrx84ft56"
+          "Value": "scas0d43wv"
         },
         {
           "Name": "label",
@@ -21505,12 +21642,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.styles.css",
+      "Route": "Pixelix.UI.scas0d43wv.styles.css",
       "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Pixelix.UI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21520,7 +21657,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1131"
         },
         {
           "Name": "Content-Type",
@@ -21528,11 +21665,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21542,7 +21679,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7qrx84ft56"
+          "Value": "scas0d43wv"
         },
         {
           "Name": "label",
@@ -21550,13 +21687,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
     {
-      "Route": "Pixelix.UI.7qrx84ft56.styles.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-7qrx84ft56.gz",
+      "Route": "Pixelix.UI.scas0d43wv.styles.css.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-scas0d43wv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21565,7 +21702,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "Content-Type",
@@ -21573,11 +21710,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21595,7 +21732,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7qrx84ft56"
+          "Value": "scas0d43wv"
         },
         {
           "Name": "label",
@@ -21603,155 +21740,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw="
-        }
-      ]
-    },
-    {
-      "Route": "Pixelix.UI.bundle.scp.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-7qrx84ft56.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001838235294"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "543"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
-        }
-      ]
-    },
-    {
-      "Route": "Pixelix.UI.bundle.scp.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Pixelix.UI.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1128"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
-        }
-      ]
-    },
-    {
-      "Route": "Pixelix.UI.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\l9t5d1w6gk-7qrx84ft56.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "543"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw="
+          "Value": "sha256-6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8="
         }
       ]
     },
     {
       "Route": "Pixelix.UI.styles.css",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-7qrx84ft56.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-scas0d43wv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001838235294"
+          "Quality": "0.001801801802"
         }
       ],
       "ResponseHeaders": [
@@ -21761,15 +21761,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21789,13 +21789,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "W/\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
@@ -21810,7 +21810,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1128"
+          "Value": "1131"
         },
         {
           "Name": "Content-Type",
@@ -21818,11 +21818,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q=\""
+          "Value": "\"lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21832,13 +21832,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YS1UcdO/7vevPbMXZEVWeLh8Zt8C+6E49TLfiMT8S7Q="
+          "Value": "sha256-lIhuZqex7HGw2jOkX/b2T2L2krYa/fKCKSXU4Qch1Ic="
         }
       ]
     },
     {
       "Route": "Pixelix.UI.styles.css.gz",
-      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-7qrx84ft56.gz",
+      "AssetFile": "C:\\Users\\etec\\Desktop\\Pixelix\\Pixelix.UI\\obj\\Debug\\net9.0\\compressed\\yew3axtqup-scas0d43wv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21847,7 +21847,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "543"
+          "Value": "554"
         },
         {
           "Name": "Content-Type",
@@ -21855,11 +21855,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw=\""
+          "Value": "\"6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Nov 2025 00:59:26 GMT"
+          "Value": "Tue, 11 Nov 2025 01:26:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21877,7 +21877,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PH9KUGZfPGpg7k+wuT8MDW3sivOr9HBz3SfRlIF5Giw="
+          "Value": "sha256-6dqiHeuOKvjCj4/L26LrtHhQODjBkKBbv6556eZRnl8="
         }
       ]
     }
