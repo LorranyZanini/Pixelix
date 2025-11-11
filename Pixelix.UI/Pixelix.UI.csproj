@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <disable>enable</disable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
