@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace <NOME DO PROJETO>.UI.Controllers;
+namespace Pixelix.UI.Controllers;
 
 [Authorize(Roles = "Administrador")]
 public class AdminController : Controller

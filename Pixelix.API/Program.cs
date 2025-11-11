@@ -128,7 +128,7 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddHttpContextAccessor(); 
 
-//builder.Services.AddScoped<IFileService, FileService>(); 
+builder.Services.AddScoped<IFileService, FileService>(); 
 
  
 
